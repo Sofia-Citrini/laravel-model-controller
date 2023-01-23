@@ -14,19 +14,19 @@
 
 <body>
     <main class="container pb-3">
-        <h1 class="text-center py-4">MOVIES</h1>
+        <h1 class="text-center py-5">MOVIES</h1>
 
-        <div class="row g-4">
+        <div class="row gy-3">
             @foreach ($movies as $movie)
-                <div class="col-6">
-                    <div class="card">
+                <div class="card-container">
+                    <div class="card text-end">
                         <div class="card-body">
                           <h5 class="card-title">{{$movie->title}}</h5>
                           <h6 class="card-subtitle mb-2 text-muted">{{$movie->original_title}}</h6>
-                          <div class="card-text">Data di uscita: {{$movie->date}}</div>
-                          <div class="card-text">Voto: {{$movie->vote}}</div>
+                          <div class="card-text py-2">{{date("d/m/Y", strtotime($movie->date))}}</div>
+                          <div class="card-text py-2">{{$movie->vote}}</div>
                         </div>
-                      </div>
+                    </div>
                 </div>
             @endforeach
         </div>

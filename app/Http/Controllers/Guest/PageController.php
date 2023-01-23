@@ -13,7 +13,7 @@ class PageController extends Controller
         
         $movies = Movie::all();
 
-        dump($movies);
+        // dump($movies);
 
         return view('home', [
             'movies' => $movies

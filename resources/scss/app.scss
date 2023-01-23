@@ -1,1 +1,26 @@
-@import '~bootstrap/scss/bootstrap'
+@use 'partials/variables' as *;
+
+@import '~bootstrap/scss/bootstrap';
+
+body {
+    background-color: $bg-color;
+}
+
+h1 {
+    color: $title;
+    font-weight: bolder;
+    letter-spacing: 5px;
+}
+
+.card-container{
+    flex-basis: calc(100% / 5);
+    
+    .card{
+        height: 11rem;
+        background-color: $card-bg;
+
+        .card-title{
+            color: $title;
+        }
+    }
+}
